@@ -11,8 +11,7 @@ interface CartState {
 }
 
 const initialState: CartState = {
-  // Seed the cart with one item for easier testing
-  items: [{ productId: "1", quantity: 2 }],
+  items: [],
 };
 
 const cartSlice = createSlice({
