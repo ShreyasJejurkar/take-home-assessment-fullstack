@@ -1,0 +1,22 @@
+.product-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.product-card a:hover {
+  text-decoration: underline;
+}

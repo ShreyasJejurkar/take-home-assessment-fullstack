@@ -1,21 +1,24 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import ProductList from './pages/ProductList';
-import ProductDetail from './pages/ProductDetail';
-import Cart from './pages/Cart';
-import Home from './pages/Home';
+import { Routes, Route, Link } from "react-router-dom";
+import ProductList from "./pages/ProductList";
+import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
+import "./App.css"; // Import the new CSS file
 
 export default function App() {
   return (
     <>
-      <header style={headerStyle}>
-        <Link to="/" style={logoStyle}>DecryptCode Shop</Link>
-        <nav style={navStyle}>
+      <header className="app-header">
+        <Link to="/" className="app-logo">
+          DecryptCode Shop
+        </Link>
+        <nav className="app-nav">
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
           <Link to="/cart">Cart</Link>
         </nav>
       </header>
-      <main style={mainStyle}>
+      <main className="app-main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductList />} />
@@ -26,16 +29,3 @@ export default function App() {
     </>
   );
 }
-
-const headerStyle: React.CSSProperties = {
-  padding: '1rem 2rem',
-  background: '#1e3a5f',
-  color: '#fff',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-};
-
-const logoStyle: React.CSSProperties = { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' };
-const navStyle: React.CSSProperties = { display: 'flex', gap: '1.5rem' };
-const mainStyle: React.CSSProperties = { padding: '2rem', maxWidth: 1200, margin: '0 auto' };
